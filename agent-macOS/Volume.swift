@@ -37,6 +37,11 @@ func getDefaultOutputDevice() throws -> AudioDeviceID {
 
 
 func setDeviceVolume(outputDeviceID: AudioDeviceID, value: Float32) throws {
+  let err = checkOutputDevice(outputDeviceID: outputDeviceID)
+  guard err == nil else {
+    throw err!
+  }
+  
   guard value >= 0.0 || value <= 1.0 else {
       throw VolumeError.invalidVolumeValue
   }
@@ -48,10 +53,6 @@ func setDeviceVolume(outputDeviceID: AudioDeviceID, value: Float32) throws {
       mSelector: AudioObjectPropertySelector(kAudioHardwareServiceDeviceProperty_VirtualMasterVolume),
       mScope: AudioObjectPropertyScope(kAudioDevicePropertyScopeOutput),
       mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
-  
-  guard AudioObjectHasProperty(outputDeviceID, &volumePropertyAddress) else {
-    throw VolumeError.outputDeviceHasNoVolumeProperty
-  }
     
   let status = AudioObjectSetPropertyData(
       outputDeviceID,
@@ -68,8 +69,9 @@ func setDeviceVolume(outputDeviceID: AudioDeviceID, value: Float32) throws {
 }
 
 func getDeviceVolume(outputDeviceID: AudioDeviceID) throws -> Float32 {
-  guard outputDeviceID != kAudioObjectUnknown else {
-    throw VolumeError.invalidOutputDeviceID
+  let err = checkOutputDevice(outputDeviceID: outputDeviceID)
+  guard err == nil else {
+    throw err!
   }
   
   var volume: Float32 = -1.0
@@ -79,10 +81,6 @@ func getDeviceVolume(outputDeviceID: AudioDeviceID) throws -> Float32 {
     mSelector: AudioObjectPropertySelector(kAudioHardwareServiceDeviceProperty_VirtualMasterVolume),
     mScope: AudioObjectPropertyScope(kAudioDevicePropertyScopeOutput),
     mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
-  
-  guard AudioObjectHasProperty(outputDeviceID, &volumePropertyAddress) else {
-    throw VolumeError.outputDeviceHasNoVolumeProperty
-  }
   
   let status = AudioObjectGetPropertyData(
       outputDeviceID,
@@ -98,4 +96,23 @@ func getDeviceVolume(outputDeviceID: AudioDeviceID) throws -> Float32 {
   }
   
   return volume
+}
+
+func checkOutputDevice(outputDeviceID: AudioDeviceID) -> Error? {
+  // Has volume property
+  var volumePropertyAddress = AudioObjectPropertyAddress(
+    mSelector: AudioObjectPropertySelector(kAudioHardwareServiceDeviceProperty_VirtualMasterVolume),
+    mScope: AudioObjectPropertyScope(kAudioDevicePropertyScopeOutput),
+    mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
+  
+  guard AudioObjectHasProperty(outputDeviceID, &volumePropertyAddress) else {
+    return VolumeError.outputDeviceHasNoVolumeProperty
+  }
+  
+  // Unknown ID
+  guard outputDeviceID != kAudioObjectUnknown else {
+    return VolumeError.invalidOutputDeviceID
+  }
+  
+  return nil
 }
