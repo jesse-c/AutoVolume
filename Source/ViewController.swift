@@ -1,15 +1,9 @@
-//
-//  ViewController.swift
-//  agent-macOS
-//
-//  Created by Jesse Claven on 17/12/16.
-//  Copyright © 2016 Jesse Claven. All rights reserved.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    let appDelegate = NSApplication.shared().delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +16,13 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func sliderChanged(_ sender: NSSlider) {
+        let val: Float = sender.floatValue
+        let userInfo: ValInfo = ["val": val]
+        
+        NSLog("Slider changed to: \(val)")
+        
+        appDelegate.nc.post(name: NSNotification.Name.OnSliderChanged, object: nil, userInfo: userInfo)
+    }
 
 }
-

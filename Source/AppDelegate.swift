@@ -1,7 +1,7 @@
 import Cocoa
 import AudioToolbox
 
-// TODO Add function to check device (simplifies repeated if checks
+typealias ValInfo = [String: Float]
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -41,12 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     // ---
-    defaults.set(0.0, forKey: desiredVolumeKey)
-    
-    // ---
-    NSLog("Setting up will sleep & did wake notifications")
+    NSLog("Setting up notification handlers")
     nc.addObserver(self, selector: #selector(handleWillSleep), name: NSNotification.Name.NSWorkspaceWillSleep, object: nil)
     nc.addObserver(self, selector: #selector(handleDidWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
+    nc.addObserver(self, selector: #selector(handleSliderChanged), name: NSNotification.Name.OnSliderChanged, object: nil)
   }
   
   func handleWillSleep(notification: Notification) {
@@ -69,13 +67,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     do {
       try setDeviceVolume(outputDeviceID: defaultOutputDeviceID!, value: desiredVolume)
+      NSLog("Set volume to \(desiredVolume)")
     } catch VolumeError.failedToSetVolume {
-      
+      NSLog("Failed to set volume")
     } catch VolumeError.outputDeviceHasNoVolumeProperty {
-      
+      NSLog("Output device has no volume property")
     } catch {
-      
+      NSLog("Other")
     }
+  }
+  
+  func handleSliderChanged(notification: Notification) {
+    NSLog("Received OnSliderChanged")
+    let userInfo = notification.userInfo as! ValInfo
+    defaults.set(userInfo["val"], forKey: desiredVolumeKey)
   }
   
   func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {

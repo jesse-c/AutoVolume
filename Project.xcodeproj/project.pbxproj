@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8857E51A1E107A3200837A87 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E5191E107A3100837A87 /* Notifications.swift */; };
 		886F9D041E05F14700F8A083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D031E05F14700F8A083 /* AppDelegate.swift */; };
 		886F9D061E05F14700F8A083 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D051E05F14700F8A083 /* ViewController.swift */; };
 		886F9D081E05F14700F8A083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886F9D071E05F14700F8A083 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8857E5191E107A3100837A87 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		886F9D001E05F14700F8A083 /* agent-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "agent-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D031E05F14700F8A083 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		886F9D051E05F14700F8A083 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				886F9D091E05F14700F8A083 /* Main.storyboard */,
 				886F9D0C1E05F14700F8A083 /* Info.plist */,
 				886F9D321E061A2400F8A083 /* jesse-c.agent-macOS.plist */,
+				8857E5191E107A3100837A87 /* Notifications.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8857E51A1E107A3200837A87 /* Notifications.swift in Sources */,
 				886F9D2F1E05F1C800F8A083 /* README.md in Sources */,
 				886F9D061E05F14700F8A083 /* ViewController.swift in Sources */,
 				886F9D041E05F14700F8A083 /* AppDelegate.swift in Sources */,
