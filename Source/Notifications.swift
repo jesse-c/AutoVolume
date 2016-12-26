@@ -1,5 +1,6 @@
 import Foundation
 
 extension Notification.Name {
-  static let OnSliderChanged = Notification.Name("on-slider-changed")
+  static let OnVolumeChanged = Notification.Name("on-volume-changed")
+  static let OnEnabledButtonPressed = Notification.Name("on-enabled-button-pressed")
 }

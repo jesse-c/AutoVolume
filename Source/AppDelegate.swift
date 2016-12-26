@@ -2,16 +2,18 @@ import Cocoa
 import AudioToolbox
 
 typealias ValInfo = [String: Float]
+typealias EnabledInfo = [String: Int]
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   
-  let defaults = UserDefaults.standard
+  let defaults: UserDefaults = UserDefaults.standard
   let desiredVolumeKey: String = "desiredVolume"
+  let enabledKey: String = "enabled"
   
   var defaultOutputDeviceID: AudioDeviceID? = kAudioObjectUnknown // TODO Remove default assigned value? Stop it being nil and default to unknown
   
-  let nc = NSWorkspace.shared().notificationCenter
+  let nc: NotificationCenter = NSWorkspace.shared().notificationCenter
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // ---
@@ -42,19 +44,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // ---
     NSLog("Setting up notification handlers")
-    nc.addObserver(self, selector: #selector(handleWillSleep), name: NSNotification.Name.NSWorkspaceWillSleep, object: nil)
-    nc.addObserver(self, selector: #selector(handleDidWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
-    nc.addObserver(self, selector: #selector(handleSliderChanged), name: NSNotification.Name.OnSliderChanged, object: nil)
+    nc.addObserver(self, selector: #selector(self.handleWillSleep), name: NSNotification.Name.NSWorkspaceWillSleep, object: nil)
+    nc.addObserver(self, selector: #selector(self.handleDidWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
+    nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
+    nc.addObserver(self, selector: #selector(self.handleEnabledStateChanged), name: NSNotification.Name.OnEnabledButtonPressed, object: nil)
+    
+    // TODO Bring window to front
   }
   
   func handleWillSleep(notification: Notification) {
-    NSLog("Workspace will sleep")
-    NSLog(notification.description)
+    NSLog("Received \(notification.name)")
   }
   
   func handleDidWake(notification: Notification) {
-    NSLog("Workspace did wake")
-    NSLog(notification.description)
+    NSLog("Received \(notification.name)")
+    
+    // Check if enabled state is on
+    let enabledState = defaults.integer(forKey: enabledKey)
+    guard enabledState == NSOnState else {
+      NSLog("Not enabled")
+      return
+    }
     
     let err = checkOutputDevice(outputDeviceID: defaultOutputDeviceID!)
     guard err == nil else {
@@ -77,10 +87,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
   }
   
-  func handleSliderChanged(notification: Notification) {
-    NSLog("Received OnSliderChanged")
+  func handleVolumeChanged(notification: Notification) {
+    NSLog("Received \(notification.name)")
     let userInfo = notification.userInfo as! ValInfo
     defaults.set(userInfo["val"], forKey: desiredVolumeKey)
+  }
+  
+  func handleEnabledStateChanged(notification: Notification) {
+    NSLog("Received \(notification.name)")
+    let userInfo = notification.userInfo as! EnabledInfo
+    defaults.set(userInfo["buttonState"], forKey: enabledKey)
   }
   
   func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
