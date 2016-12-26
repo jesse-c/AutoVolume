@@ -7,12 +7,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var volumeSlider: NSSlider!
     @IBOutlet weak var currentVolume: NSTextField!
     @IBOutlet weak var enabledCheckbox: NSButton!
+    @IBOutlet weak var quitButton: NSButtonCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+      
         let volume = appDelegate.defaults.float(forKey: appDelegate.desiredVolumeKey)
         self.currentVolume.placeholderString = "?"
         self.currentVolume.stringValue = NSString(format: "%.2f", volume) as String
@@ -26,7 +27,8 @@ class ViewController: NSViewController {
         // Set enabled button to current state
         let buttonState = appDelegate.defaults.integer(forKey: appDelegate.enabledKey)
         enabledCheckbox.state = buttonState
-
+        
+        //
         appDelegate.nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
         
     }
@@ -46,13 +48,18 @@ class ViewController: NSViewController {
         appDelegate.nc.post(name: NSNotification.Name.OnVolumeChanged, object: nil, userInfo: userInfo)
     }
 
-    @IBAction func buttonPressed(_ sender: NSButtonCell) {
+    @IBAction func enabledButtonPressed(_ sender: NSButton) {
         let buttonState = enabledCheckbox.state
         let userInfo: EnabledInfo = ["buttonState": buttonState]
         
         NSLog("Enabled button pressed. State is: \(buttonState)")
         
         appDelegate.nc.post(name: NSNotification.Name.OnEnabledButtonPressed, object: nil, userInfo: userInfo)
+    }
+
+    @IBAction func quitButtonPressed(_ sender: Any) {
+      NSLog("Quit button pressed")
+      appDelegate.nc.post(name: NSNotification.Name.OnQuitButtonPressed, object: nil, userInfo: nil)
     }
     
     // This is done here in case we have multiple sources posting notifications

@@ -700,10 +700,10 @@
                                 <buttonCell key="cell" type="check" title="Enabled" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="DuN-s3-SSE">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <connections>
-                                        <action selector="buttonPressed:" target="XfG-lQ-9wD" id="6rV-BB-ejU"/>
-                                    </connections>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="enabledButtonPressed:" target="XfG-lQ-9wD" id="mup-iY-QG0"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-bu-RWI">
                                 <rect key="frame" x="380" y="102" width="22" height="17"/>
@@ -750,11 +750,23 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uov-Xv-cBh">
+                                <rect key="frame" x="206" y="13" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4GM-Qr-8E8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="quitButtonPressed:" target="XfG-lQ-9wD" id="VdZ-S5-N9T"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="currentVolume" destination="CZq-oz-LfS" id="RRr-4u-A5a"/>
                         <outlet property="enabledCheckbox" destination="EOn-j0-Cdj" id="Zdx-cJ-kKm"/>
+                        <outlet property="quitButton" destination="4GM-Qr-8E8" id="aMZ-on-4Pd"/>
                         <outlet property="volumeSlider" destination="dhH-Nr-bYd" id="wKn-JM-Tqy"/>
                     </connections>
                 </viewController>

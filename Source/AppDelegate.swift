@@ -48,8 +48,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     nc.addObserver(self, selector: #selector(self.handleDidWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
     nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
     nc.addObserver(self, selector: #selector(self.handleEnabledStateChanged), name: NSNotification.Name.OnEnabledButtonPressed, object: nil)
+    nc.addObserver(self, selector: #selector(self.handleQuit), name: NSNotification.Name.OnQuitButtonPressed, object: nil)
     
-    // TODO Bring window to front
   }
   
   func handleWillSleep(notification: Notification) {
@@ -99,6 +99,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     defaults.set(userInfo["buttonState"], forKey: enabledKey)
   }
   
+  func handleQuit(notification: Notification) {
+    NSApplication.shared().terminate(self)
+  }
+  
   func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
     /* TODO For now, we know there is only 1 window, so we can access the 0th element
      * But ideally we're a bit smarter about this—i.e. check for which window to
@@ -119,6 +123,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationWillTerminate(_ aNotification: Notification) {
     nc.removeObserver(self)
+    defaults.synchronize()
   }
   
 }
