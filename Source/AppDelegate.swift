@@ -16,33 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let nc: NotificationCenter = NSWorkspace.shared().notificationCenter
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    // ---
-    do {
-      try defaultOutputDeviceID = getDefaultOutputDevice()
-      NSLog("Default output device ID: \(defaultOutputDeviceID)")
-      
-      do {
-        let currentVolume: Float32 = try getDeviceVolume(outputDeviceID: defaultOutputDeviceID!)
-        NSLog("Current volume: \(currentVolume)")
-      } catch VolumeError.failedToGetVolume(let status) {
-        NSLog("Failed to get current volume: \(status)")
-      } catch VolumeError.outputDeviceHasNoVolumeProperty {
-        NSLog("Output device missing volume property")
-      }
-      
-      do {
-        try setDeviceVolume(outputDeviceID: defaultOutputDeviceID!, value: 0.25)
-      } catch VolumeError.failedToSetVolume(let status) {
-        NSLog("Failed to set current volume: \(status)")
-      } catch VolumeError.outputDeviceHasNoVolumeProperty {
-        NSLog("Output device missing volume property")
-      }
-    } catch {
-      NSLog("No default output device found")
-      return
-    }
     
-    // ---
+    // Notifications
     NSLog("Setting up notification handlers")
     nc.addObserver(self, selector: #selector(self.handleWillSleep), name: NSNotification.Name.NSWorkspaceWillSleep, object: nil)
     nc.addObserver(self, selector: #selector(self.handleDidWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
@@ -50,6 +25,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     nc.addObserver(self, selector: #selector(self.handleEnabledStateChanged), name: NSNotification.Name.OnEnabledButtonPressed, object: nil)
     nc.addObserver(self, selector: #selector(self.handleQuit), name: NSNotification.Name.OnQuitButtonPressed, object: nil)
     
+    do {
+      try defaultOutputDeviceID = getDefaultOutputDevice()
+      NSLog("Default output device ID: \(defaultOutputDeviceID)")
+    } catch VolumeError.noDefaultOutputDevice {
+      NSLog("No default output device found, qutting")
+      showAlert(style: NSAlertStyle.critical, message: "Failed to find system audio device.", info: "Application will now quit.")
+      self.nc.post(name: NSNotification.Name.OnQuitButtonPressed, object: nil, userInfo: nil)
+    } catch {
+      showAlert(style: NSAlertStyle.critical, message: error as! String, info: "Application will now quit.")
+    }
+
+  }
+  
+  func showAlert(style: NSAlertStyle, message: String, info: String) {
+    let alert = NSAlert.init()
+    alert.alertStyle = NSAlertStyle.critical
+    alert.messageText = message
+    alert.informativeText = info
+    alert.addButton(withTitle: "Okay")
+    alert.runModal()
   }
   
   func handleWillSleep(notification: Notification) {
