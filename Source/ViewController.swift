@@ -10,26 +10,28 @@ class ViewController: NSViewController {
     @IBOutlet weak var quitButton: NSButtonCell!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+      // Do any additional setup after loading the view.
       
-        let volume = appDelegate.defaults.float(forKey: appDelegate.desiredVolumeKey)
-        self.currentVolume.placeholderString = "?"
-        self.currentVolume.stringValue = NSString(format: "%.2f", volume) as String
+      let volume = appDelegate.defaults.float(forKey: appDelegate.desiredVolumeKey)
+      self.currentVolume.placeholderString = "?"
+      self.currentVolume.stringValue = NSString(format: "%.2f", volume) as String
         
-        self.currentVolume.isEditable = false
-        self.currentVolume.isSelectable = false
+      self.currentVolume.isEditable = false
+      self.currentVolume.isSelectable = false
         
-        // Set slider to current volume
-        volumeSlider.floatValue = volume
+      // Set slider to current volume
+      volumeSlider.floatValue = volume
         
-        // Set enabled button to current state
-        let buttonState = appDelegate.defaults.integer(forKey: appDelegate.enabledKey)
-        enabledCheckbox.state = buttonState
+      // Set enabled button to current state
+      let buttonState = appDelegate.defaults.integer(forKey: appDelegate.enabledKey)
+      enabledCheckbox.state = buttonState
+      
+      // Bring to front
         
-        //
-        appDelegate.nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
+      // Notifications
+      appDelegate.nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
         
     }
 
@@ -49,12 +51,12 @@ class ViewController: NSViewController {
     }
 
     @IBAction func enabledButtonPressed(_ sender: NSButton) {
-        let buttonState = enabledCheckbox.state
-        let userInfo: EnabledInfo = ["buttonState": buttonState]
+      let buttonState = enabledCheckbox.state
+      let userInfo: EnabledInfo = ["buttonState": buttonState]
         
-        NSLog("Enabled button pressed. State is: \(buttonState)")
+      NSLog("Enabled button pressed. State is: \(buttonState)")
         
-        appDelegate.nc.post(name: NSNotification.Name.OnEnabledButtonPressed, object: nil, userInfo: userInfo)
+      appDelegate.nc.post(name: NSNotification.Name.OnEnabledButtonPressed, object: nil, userInfo: userInfo)
     }
 
     @IBAction func quitButtonPressed(_ sender: Any) {
