@@ -28,7 +28,8 @@ class ViewController: NSViewController {
       let buttonState = appDelegate.defaults.integer(forKey: appDelegate.enabledKey)
       enabledCheckbox.state = buttonState
       
-      // Bring to front
+      // Centre
+      self.view.window?.center()
         
       // Notifications
       appDelegate.nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)

@@ -16,7 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let nc: NotificationCenter = NSWorkspace.shared().notificationCenter
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    
     // Notifications
     NSLog("Setting up notification handlers")
     nc.addObserver(self, selector: #selector(self.handleWillSleep), name: NSNotification.Name.NSWorkspaceWillSleep, object: nil)
@@ -35,7 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     } catch {
       showAlert(style: NSAlertStyle.critical, message: error as! String, info: "Application will now quit.")
     }
-
+    
+    // Bring to front
+    NSApplication.shared().activate(ignoringOtherApps: true)
   }
   
   func showAlert(style: NSAlertStyle, message: String, info: String) {
