@@ -65,9 +65,10 @@ class ViewController: NSViewController {
     // This is done here in case we have multiple sources posting notifications
     // modifying the volume.
     func handleVolumeChanged(notification: Notification) {
-        NSLog("Received \(notification.name)")
-        let userInfo = notification.userInfo as! ValInfo
-        currentVolume.stringValue = "\(userInfo["val"])"
+      NSLog("Received \(notification.name)")
+      let userInfo = notification.userInfo as! ValInfo
+      let volume = userInfo["val"]! as Float
+      currentVolume.stringValue = NSString(format: "%.2f", volume) as String
     }
 
 }
