@@ -16,7 +16,6 @@
 		886F9D211E05F14700F8A083 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D201E05F14700F8A083 /* UITests.swift */; };
 		886F9D2F1E05F1C800F8A083 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D2E1E05F1C800F8A083 /* README.md */; };
 		886F9D311E05F1DF00F8A083 /* Volume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D301E05F1DF00F8A083 /* Volume.swift */; };
-		886F9D331E061A2400F8A083 /* jesse-c.agent-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886F9D321E061A2400F8A083 /* jesse-c.agent-macOS.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,34 +24,33 @@
 			containerPortal = 886F9CF81E05F14700F8A083 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 886F9CFF1E05F14700F8A083;
-			remoteInfo = "agent-macOS";
+			remoteInfo = "Agent";
 		};
 		886F9D1D1E05F14700F8A083 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 886F9CF81E05F14700F8A083 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 886F9CFF1E05F14700F8A083;
-			remoteInfo = "agent-macOS";
+			remoteInfo = "Agent";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8857E5191E107A3100837A87 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		886F9D001E05F14700F8A083 /* agent-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "agent-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		886F9D001E05F14700F8A083 /* Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D031E05F14700F8A083 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		886F9D051E05F14700F8A083 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		886F9D071E05F14700F8A083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		886F9D0A1E05F14700F8A083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		886F9D0C1E05F14700F8A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		886F9D111E05F14700F8A083 /* agent-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "agent-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		886F9D111E05F14700F8A083 /* AgentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D151E05F14700F8A083 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		886F9D171E05F14700F8A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		886F9D1C1E05F14700F8A083 /* agent-macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "agent-macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		886F9D1C1E05F14700F8A083 /* AgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D201E05F14700F8A083 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		886F9D221E05F14700F8A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886F9D2E1E05F1C800F8A083 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		886F9D301E05F1DF00F8A083 /* Volume.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Volume.swift; sourceTree = "<group>"; tabWidth = 2; };
-		886F9D321E061A2400F8A083 /* jesse-c.agent-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "jesse-c.agent-macOS.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +93,9 @@
 		886F9D011E05F14700F8A083 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				886F9D001E05F14700F8A083 /* agent-macOS.app */,
-				886F9D111E05F14700F8A083 /* agent-macOSTests.xctest */,
-				886F9D1C1E05F14700F8A083 /* agent-macOSUITests.xctest */,
+				886F9D001E05F14700F8A083 /* Agent.app */,
+				886F9D111E05F14700F8A083 /* AgentTests.xctest */,
+				886F9D1C1E05F14700F8A083 /* AgentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +110,6 @@
 				886F9D071E05F14700F8A083 /* Assets.xcassets */,
 				886F9D091E05F14700F8A083 /* Main.storyboard */,
 				886F9D0C1E05F14700F8A083 /* Info.plist */,
-				886F9D321E061A2400F8A083 /* jesse-c.agent-macOS.plist */,
 				8857E5191E107A3100837A87 /* Notifications.swift */,
 			);
 			path = Source;
@@ -139,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		886F9CFF1E05F14700F8A083 /* agent-macOS */ = {
+		886F9CFF1E05F14700F8A083 /* Agent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "agent-macOS" */;
+			buildConfigurationList = 886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "Agent" */;
 			buildPhases = (
 				886F9CFC1E05F14700F8A083 /* Sources */,
 				886F9CFD1E05F14700F8A083 /* Frameworks */,
@@ -151,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = "agent-macOS";
-			productName = "agent-macOS";
-			productReference = 886F9D001E05F14700F8A083 /* agent-macOS.app */;
+			name = Agent;
+			productName = "Agent";
+			productReference = 886F9D001E05F14700F8A083 /* Agent.app */;
 			productType = "com.apple.product-type.application";
 		};
-		886F9D101E05F14700F8A083 /* agent-macOSTests */ = {
+		886F9D101E05F14700F8A083 /* AgentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "agent-macOSTests" */;
+			buildConfigurationList = 886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentTests" */;
 			buildPhases = (
 				886F9D0D1E05F14700F8A083 /* Sources */,
 				886F9D0E1E05F14700F8A083 /* Frameworks */,
@@ -169,14 +166,14 @@
 			dependencies = (
 				886F9D131E05F14700F8A083 /* PBXTargetDependency */,
 			);
-			name = "agent-macOSTests";
-			productName = "agent-macOSTests";
-			productReference = 886F9D111E05F14700F8A083 /* agent-macOSTests.xctest */;
+			name = AgentTests;
+			productName = "AgentTests";
+			productReference = 886F9D111E05F14700F8A083 /* AgentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		886F9D1B1E05F14700F8A083 /* agent-macOSUITests */ = {
+		886F9D1B1E05F14700F8A083 /* AgentUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "agent-macOSUITests" */;
+			buildConfigurationList = 886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentUITests" */;
 			buildPhases = (
 				886F9D181E05F14700F8A083 /* Sources */,
 				886F9D191E05F14700F8A083 /* Frameworks */,
@@ -187,9 +184,9 @@
 			dependencies = (
 				886F9D1E1E05F14700F8A083 /* PBXTargetDependency */,
 			);
-			name = "agent-macOSUITests";
-			productName = "agent-macOSUITests";
-			productReference = 886F9D1C1E05F14700F8A083 /* agent-macOSUITests.xctest */;
+			name = AgentUITests;
+			productName = "AgentUITests";
+			productReference = 886F9D1C1E05F14700F8A083 /* AgentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "Project" */;
+			buildConfigurationList = 886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "Agent" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,9 +231,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				886F9CFF1E05F14700F8A083 /* agent-macOS */,
-				886F9D101E05F14700F8A083 /* agent-macOSTests */,
-				886F9D1B1E05F14700F8A083 /* agent-macOSUITests */,
+				886F9CFF1E05F14700F8A083 /* Agent */,
+				886F9D101E05F14700F8A083 /* AgentTests */,
+				886F9D1B1E05F14700F8A083 /* AgentUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,7 +245,6 @@
 			files = (
 				886F9D081E05F14700F8A083 /* Assets.xcassets in Resources */,
 				886F9D0B1E05F14700F8A083 /* Main.storyboard in Resources */,
-				886F9D331E061A2400F8A083 /* jesse-c.agent-macOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		886F9D131E05F14700F8A083 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 886F9CFF1E05F14700F8A083 /* agent-macOS */;
+			target = 886F9CFF1E05F14700F8A083 /* Agent */;
 			targetProxy = 886F9D121E05F14700F8A083 /* PBXContainerItemProxy */;
 		};
 		886F9D1E1E05F14700F8A083 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 886F9CFF1E05F14700F8A083 /* agent-macOS */;
+			target = 886F9CFF1E05F14700F8A083 /* Agent */;
 			targetProxy = 886F9D1D1E05F14700F8A083 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -422,7 +418,7 @@
 				DEVELOPMENT_TEAM = SCM43BAGSW;
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.agent-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.Agent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -436,7 +432,7 @@
 				DEVELOPMENT_TEAM = SCM43BAGSW;
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.agent-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.Agent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -449,12 +445,12 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = "agent-macOSTests/Info.plist";
+				INFOPLIST_FILE = "AgentTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.agent-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/agent-macOS.app/Contents/MacOS/agent-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agent.app/Contents/MacOS/Agent";
 			};
 			name = Debug;
 		};
@@ -465,12 +461,12 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = "agent-macOSTests/Info.plist";
+				INFOPLIST_FILE = "AgentTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.agent-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/agent-macOS.app/Contents/MacOS/agent-macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agent.app/Contents/MacOS/Agent";
 			};
 			name = Release;
 		};
@@ -480,12 +476,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = "agent-macOSUITests/Info.plist";
+				INFOPLIST_FILE = "AgentUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.agent-macOSUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "agent-macOS";
+				TEST_TARGET_NAME = "Agent";
 			};
 			name = Debug;
 		};
@@ -495,19 +491,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = "agent-macOSUITests/Info.plist";
+				INFOPLIST_FILE = "AgentUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.agent-macOSUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "agent-macOS";
+				TEST_TARGET_NAME = "Agent";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "Project" */ = {
+		886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "Agent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D231E05F14700F8A083 /* Debug */,
@@ -516,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "agent-macOS" */ = {
+		886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "Agent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D261E05F14700F8A083 /* Debug */,
@@ -525,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "agent-macOSTests" */ = {
+		886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D291E05F14700F8A083 /* Debug */,
@@ -534,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "agent-macOSUITests" */ = {
+		886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D2C1E05F14700F8A083 /* Debug */,

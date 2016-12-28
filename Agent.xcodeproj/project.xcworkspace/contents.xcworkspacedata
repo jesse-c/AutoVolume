@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:agent-macOS.xcodeproj">
+      location = "self:/Users/jesse/Dropbox/Projects/agent-macOS/src/Agent/Agent.xcodeproj">
    </FileRef>
 </Workspace>
