@@ -161,9 +161,9 @@
 		886F9CF71E05F14700F8A083 = {
 			isa = PBXGroup;
 			children = (
-				886F9D021E05F14700F8A083 /* Source */,
-				886F9D141E05F14700F8A083 /* Tests */,
-				886F9D1F1E05F14700F8A083 /* UITests */,
+				886F9D021E05F14700F8A083 /* Agent */,
+				886F9D141E05F14700F8A083 /* AgentTests */,
+				886F9D1F1E05F14700F8A083 /* AgentUITests */,
 				884EBE861E14842C007DE6F4 /* AgentHelper */,
 				884EBE9A1E14842C007DE6F4 /* AgentHelperTests */,
 				886F9D011E05F14700F8A083 /* Products */,
@@ -184,7 +184,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		886F9D021E05F14700F8A083 /* Source */ = {
+		886F9D021E05F14700F8A083 /* Agent */ = {
 			isa = PBXGroup;
 			children = (
 				886F9D2E1E05F1C800F8A083 /* README.md */,
@@ -196,25 +196,25 @@
 				886F9D0C1E05F14700F8A083 /* Info.plist */,
 				8857E5191E107A3100837A87 /* Notifications.swift */,
 			);
-			path = Source;
+			path = Agent;
 			sourceTree = "<group>";
 		};
-		886F9D141E05F14700F8A083 /* Tests */ = {
+		886F9D141E05F14700F8A083 /* AgentTests */ = {
 			isa = PBXGroup;
 			children = (
 				886F9D151E05F14700F8A083 /* Tests.swift */,
 				886F9D171E05F14700F8A083 /* Info.plist */,
 			);
-			path = Tests;
+			path = AgentTests;
 			sourceTree = "<group>";
 		};
-		886F9D1F1E05F14700F8A083 /* UITests */ = {
+		886F9D1F1E05F14700F8A083 /* AgentUITests */ = {
 			isa = PBXGroup;
 			children = (
 				886F9D201E05F14700F8A083 /* UITests.swift */,
 				886F9D221E05F14700F8A083 /* Info.plist */,
 			);
-			path = UITests;
+			path = AgentUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
