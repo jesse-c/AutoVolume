@@ -1,8 +1,10 @@
 import Cocoa
 import AudioToolbox
+import ServiceManagement
 
 typealias ValInfo = [String: Float]
 typealias EnabledInfo = [String: Int]
+typealias LoginStartInfo = [String: Int]
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -10,6 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let defaults: UserDefaults = UserDefaults.standard
   let desiredVolumeKey: String = "desiredVolume"
   let enabledKey: String = "enabled"
+  let loginStartKey: String = "loginStart"
   
   var defaultOutputDeviceID: AudioDeviceID? = kAudioObjectUnknown // TODO Remove default assigned value? Stop it being nil and default to unknown
   
@@ -22,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     nc.addObserver(self, selector: #selector(self.handleDidWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
     nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
     nc.addObserver(self, selector: #selector(self.handleEnabledStateChanged), name: NSNotification.Name.OnEnabledButtonPressed, object: nil)
+    nc.addObserver(self, selector: #selector(self.handleLoginStartStateChanged), name: NSNotification.Name.OnLoginStartButtonPressed, object: nil)
     nc.addObserver(self, selector: #selector(self.handleQuit), name: NSNotification.Name.OnQuitButtonPressed, object: nil)
     
     do {
@@ -87,6 +91,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     NSLog("Received \(notification.name)")
     let userInfo = notification.userInfo as! ValInfo
     defaults.set(userInfo["val"], forKey: desiredVolumeKey)
+  }
+  
+  func handleLoginStartStateChanged(notification: Notification) {
+    NSLog("Received \(notification.name)")
+    let userInfo = notification.userInfo as! LoginStartInfo
+    let state = (userInfo["state"] == NSOnState)
+  
+    _ = setLoginStartState(state: state)
+    defaults.set(userInfo["state"], forKey: loginStartKey)
+  }
+  
+  func setLoginStartState(state: Bool) -> Bool {
+    let appBundleIdentifier = "jesse-c.AgentHelper"
+    
+    if SMLoginItemSetEnabled(appBundleIdentifier as CFString, state) {
+      if state {
+        NSLog("Successfully add login item.")
+      } else {
+        NSLog("Successfully remove login item.")
+      }
+      
+      return true
+    } else {
+      NSLog("Failed to add login item.")
+      
+      return false
+    }
   }
   
   func handleEnabledStateChanged(notification: Notification) {

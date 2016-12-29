@@ -7,6 +7,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var volumeSlider: NSSlider!
     @IBOutlet weak var currentVolume: NSTextField!
     @IBOutlet weak var enabledCheckbox: NSButton!
+    @IBOutlet weak var loginCheckbox: NSButton!
     @IBOutlet weak var quitButton: NSButtonCell!
     
     override func viewDidLoad() {
@@ -25,8 +26,12 @@ class ViewController: NSViewController {
       volumeSlider.floatValue = volume
         
       // Set enabled button to current state
-      let buttonState = appDelegate.defaults.integer(forKey: appDelegate.enabledKey)
-      enabledCheckbox.state = buttonState
+      let enabledButtonState = appDelegate.defaults.integer(forKey: appDelegate.enabledKey)
+      enabledCheckbox.state = enabledButtonState
+        
+      // Set login enabled button to current state
+      let loginButtonState = appDelegate.defaults.integer(forKey: appDelegate.loginStartKey)
+      loginCheckbox.state = loginButtonState
       
       // Centre
       self.view.window?.center()
@@ -49,6 +54,13 @@ class ViewController: NSViewController {
         NSLog("Slider changed to: \(val)")
         
         appDelegate.nc.post(name: NSNotification.Name.OnVolumeChanged, object: nil, userInfo: userInfo)
+    }
+    
+    @IBAction func loginStartButtonPressed(_ sender: NSButton) {
+      let buttonState = loginCheckbox.state
+      let userInfo: LoginStartInfo = ["buttonState": buttonState]
+        
+      appDelegate.nc.post(name: NSNotification.Name.OnLoginStartButtonPressed, object: nil, userInfo: userInfo)
     }
 
     @IBAction func enabledButtonPressed(_ sender: NSButton) {
