@@ -6,8 +6,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var volumeSlider: NSSlider!
     @IBOutlet weak var currentVolume: NSTextField!
+    @IBOutlet weak var loginStartCheckbox: NSButton!
     @IBOutlet weak var enabledCheckbox: NSButton!
-    @IBOutlet weak var loginCheckbox: NSButton!
     @IBOutlet weak var quitButton: NSButtonCell!
     
     override func viewDidLoad() {
@@ -30,8 +30,8 @@ class ViewController: NSViewController {
       enabledCheckbox.state = enabledButtonState
         
       // Set login enabled button to current state
-      let loginButtonState = appDelegate.defaults.integer(forKey: appDelegate.loginStartKey)
-      loginCheckbox.state = loginButtonState
+      let loginStartButtonState = appDelegate.defaults.integer(forKey: appDelegate.loginStartKey)
+      loginStartCheckbox.state = loginStartButtonState
       
       // Centre
       self.view.window?.center()
@@ -57,7 +57,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func loginStartButtonPressed(_ sender: NSButton) {
-      let buttonState = loginCheckbox.state
+      let buttonState = loginStartCheckbox.state
       let userInfo: LoginStartInfo = ["buttonState": buttonState]
         
       appDelegate.nc.post(name: NSNotification.Name.OnLoginStartButtonPressed, object: nil, userInfo: userInfo)

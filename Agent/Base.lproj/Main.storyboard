@@ -689,7 +689,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhH-Nr-bYd">
                                 <rect key="frame" x="68" y="125" width="334" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" numberOfTickMarks="25" sliderType="linear" id="48T-hn-uNP"/>
+                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" numberOfTickMarks="25" sliderType="linear" id="48T-hn-uNP"/>
                                 <connections>
                                     <action selector="sliderChanged:" target="XfG-lQ-9wD" id="dJ4-2s-b6w"/>
                                 </connections>
@@ -777,7 +777,7 @@
                     <connections>
                         <outlet property="currentVolume" destination="CZq-oz-LfS" id="RRr-4u-A5a"/>
                         <outlet property="enabledCheckbox" destination="EOn-j0-Cdj" id="Zdx-cJ-kKm"/>
-                        <outlet property="loginCheckbox" destination="M3r-GA-ic8" id="Ike-t9-6EN"/>
+                        <outlet property="loginStartCheckbox" destination="M3r-GA-ic8" id="16t-VE-mOd"/>
                         <outlet property="quitButton" destination="4GM-Qr-8E8" id="aMZ-on-4Pd"/>
                         <outlet property="volumeSlider" destination="dhH-Nr-bYd" id="wKn-JM-Tqy"/>
                     </connections>

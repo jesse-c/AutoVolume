@@ -96,10 +96,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func handleLoginStartStateChanged(notification: Notification) {
     NSLog("Received \(notification.name)")
     let userInfo = notification.userInfo as! LoginStartInfo
-    let state = (userInfo["state"] == NSOnState)
+    let state = (userInfo["buttonState"] == NSOnState)
   
     _ = setLoginStartState(state: state)
-    defaults.set(userInfo["state"], forKey: loginStartKey)
+    defaults.set(userInfo["buttonState"], forKey: loginStartKey)
   }
   
   func setLoginStartState(state: Bool) -> Bool {
