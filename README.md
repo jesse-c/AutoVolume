@@ -1,33 +1,31 @@
-# Initial thought
-Date: 16-06-26
-Location: Home
-Inspiration: Email notification was loud - volume was up because I watched a show last night
-Solution: If sleep longer than time period x, show a notification on log in with action to mute
-Why is it worth the effort?
-What already exists?
+# AutoVolume (Mac)
 
-Option: Mute volume if > 0, or > $threshold
-Option: Warn if > 0, or > $threshold
+AutoVolume automatically sets the volume of macOS to a specified volume. At the moment it only fires on sleep. For example, the primary use case is to set the system volume to 0 when waking from sleep to save being surprised if you were listening to music quite loud before you closed it and fell asleep.
 
-Start at login
+Why? To learn about macOS development, begin the 'Agent' idea, and practice design.
 
-Script or program or daemon
+Alternative:
 
-Tell the user with a small notification if something was done like lowering the volume or muting
-Would it need to be set at sleep?
+Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs.caffeinate.watcher.html#systemDidWake) and [mute default audio device](https://github.com/STRML/init/blob/master/hammerspoon/init.lua#L218).
 
-Not another menu bar app - System Preferences alone instead? Or just commandline at first? Where to store preferences?
+## TODO
 
-1. Wake/sleep notification receiver -> Daemon (is a daemon the best? Is it different to some other generic process?)
-2. Get/set volume -> Daemon
-3. Execute action(s) -> Daemon
-3. UI for daemon
-  - Start at login
-  - Action(s) to take
+- Fix start at login
+- Add user notifications
+- Remove NSLog or hide behind debug flag
 
-  Spectacle, NoSleep
+## Wishlist
 
-  UserDefaults for preferences?
-  Notifications
+- Choose audio device
+- Choose event for when to act
+- Only change volume if a specified amount of time has elapsed
+- Add option to display the current volume in a notable way on event
+- Act only if volume is above a specified threshold
 
-! Rename to agent-macOS
+## Contributing
+
+Contributions are welcome! Clone the repository and create a pull request.
+
+## License
+
+__N.B.__ Why the 'Agent' references? It's part of another idea I'm working on with the idea being that auto volume is a an action.
