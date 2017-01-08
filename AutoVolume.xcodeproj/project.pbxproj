@@ -11,8 +11,7 @@
 		884EBE8C1E14842C007DE6F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884EBE8B1E14842C007DE6F4 /* main.m */; };
 		884EBE8E1E14842C007DE6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884EBE8D1E14842C007DE6F4 /* Assets.xcassets */; };
 		884EBE911E14842C007DE6F4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884EBE8F1E14842C007DE6F4 /* MainMenu.xib */; };
-		884EBE9C1E14842C007DE6F4 /* AgentHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884EBE9B1E14842C007DE6F4 /* AgentHelperTests.m */; };
-		884EBEA51E15C191007DE6F4 /* AgentHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 884EBE851E14842C007DE6F4 /* AgentHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		884EBE9C1E14842C007DE6F4 /* AutoVolumeHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884EBE9B1E14842C007DE6F4 /* AutoVolumeHelperTests.m */; };
 		8857E51A1E107A3200837A87 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E5191E107A3100837A87 /* Notifications.swift */; };
 		886F9D041E05F14700F8A083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D031E05F14700F8A083 /* AppDelegate.swift */; };
 		886F9D061E05F14700F8A083 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886F9D051E05F14700F8A083 /* ViewController.swift */; };
@@ -30,21 +29,21 @@
 			containerPortal = 886F9CF81E05F14700F8A083 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 884EBE841E14842C007DE6F4;
-			remoteInfo = AgentHelper;
+			remoteInfo = AutoVolumeHelper;
 		};
 		886F9D121E05F14700F8A083 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 886F9CF81E05F14700F8A083 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 886F9CFF1E05F14700F8A083;
-			remoteInfo = Agent;
+			remoteInfo = AutoVolume;
 		};
 		886F9D1D1E05F14700F8A083 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 886F9CF81E05F14700F8A083 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 886F9CFF1E05F14700F8A083;
-			remoteInfo = Agent;
+			remoteInfo = AutoVolume;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,38 +54,37 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				884EBEA51E15C191007DE6F4 /* AgentHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		884EBE851E14842C007DE6F4 /* AgentHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		884EBE871E14842C007DE6F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		884EBE881E14842C007DE6F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		884EBE8B1E14842C007DE6F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		884EBE8D1E14842C007DE6F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		884EBE901E14842C007DE6F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		884EBE921E14842C007DE6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		884EBE971E14842C007DE6F4 /* AgentHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		884EBE9B1E14842C007DE6F4 /* AgentHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgentHelperTests.m; sourceTree = "<group>"; };
+		884EBE9B1E14842C007DE6F4 /* AutoVolumeHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoVolumeHelperTests.m; sourceTree = "<group>"; };
 		884EBE9D1E14842C007DE6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8857E5191E107A3100837A87 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		886F9D001E05F14700F8A083 /* Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D031E05F14700F8A083 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		886F9D051E05F14700F8A083 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		886F9D071E05F14700F8A083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		886F9D0A1E05F14700F8A083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		886F9D0C1E05F14700F8A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		886F9D111E05F14700F8A083 /* AgentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D151E05F14700F8A083 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		886F9D171E05F14700F8A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		886F9D1C1E05F14700F8A083 /* AgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		886F9D201E05F14700F8A083 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		886F9D221E05F14700F8A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886F9D2E1E05F1C800F8A083 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		886F9D301E05F1DF00F8A083 /* Volume.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Volume.swift; sourceTree = "<group>"; tabWidth = 2; };
+		889910B01E22FE2A00EFC0B4 /* AutoVolume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVolume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		889910B11E22FE2A00EFC0B4 /* AutoVolumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoVolumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		889910B21E22FE2A00EFC0B4 /* AutoVolumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoVolumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		889910B31E22FE2A00EFC0B4 /* AutoVolumeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoVolumeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		889910B41E22FE2A00EFC0B4 /* AutoVolumeHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoVolumeHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +126,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		884EBE861E14842C007DE6F4 /* AgentHelper */ = {
+		884EBE861E14842C007DE6F4 /* AutoVolumeHelper */ = {
 			isa = PBXGroup;
 			children = (
 				884EBE871E14842C007DE6F4 /* AppDelegate.h */,
@@ -138,7 +136,7 @@
 				884EBE921E14842C007DE6F4 /* Info.plist */,
 				884EBE8A1E14842C007DE6F4 /* Supporting Files */,
 			);
-			path = AgentHelper;
+			path = AutoVolumeHelper;
 			sourceTree = "<group>";
 		};
 		884EBE8A1E14842C007DE6F4 /* Supporting Files */ = {
@@ -149,42 +147,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		884EBE9A1E14842C007DE6F4 /* AgentHelperTests */ = {
+		884EBE9A1E14842C007DE6F4 /* AutoVolumeHelperTests */ = {
 			isa = PBXGroup;
 			children = (
-				884EBE9B1E14842C007DE6F4 /* AgentHelperTests.m */,
+				884EBE9B1E14842C007DE6F4 /* AutoVolumeHelperTests.m */,
 				884EBE9D1E14842C007DE6F4 /* Info.plist */,
 			);
-			path = AgentHelperTests;
+			path = AutoVolumeHelperTests;
 			sourceTree = "<group>";
 		};
 		886F9CF71E05F14700F8A083 = {
 			isa = PBXGroup;
 			children = (
-				886F9D021E05F14700F8A083 /* Agent */,
-				886F9D141E05F14700F8A083 /* AgentTests */,
-				886F9D1F1E05F14700F8A083 /* AgentUITests */,
-				884EBE861E14842C007DE6F4 /* AgentHelper */,
-				884EBE9A1E14842C007DE6F4 /* AgentHelperTests */,
-				886F9D011E05F14700F8A083 /* Products */,
+				886F9D021E05F14700F8A083 /* AutoVolume */,
+				886F9D141E05F14700F8A083 /* AutoVolumeTests */,
+				886F9D1F1E05F14700F8A083 /* AutoVolumeUITests */,
+				884EBE861E14842C007DE6F4 /* AutoVolumeHelper */,
+				884EBE9A1E14842C007DE6F4 /* AutoVolumeHelperTests */,
+				889910B51E22FE3A00EFC0B4 /* Products */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
-		886F9D011E05F14700F8A083 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				886F9D001E05F14700F8A083 /* Agent.app */,
-				886F9D111E05F14700F8A083 /* AgentTests.xctest */,
-				886F9D1C1E05F14700F8A083 /* AgentUITests.xctest */,
-				884EBE851E14842C007DE6F4 /* AgentHelper.app */,
-				884EBE971E14842C007DE6F4 /* AgentHelperTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		886F9D021E05F14700F8A083 /* Agent */ = {
+		886F9D021E05F14700F8A083 /* AutoVolume */ = {
 			isa = PBXGroup;
 			children = (
 				886F9D2E1E05F1C800F8A083 /* README.md */,
@@ -196,33 +182,45 @@
 				886F9D0C1E05F14700F8A083 /* Info.plist */,
 				8857E5191E107A3100837A87 /* Notifications.swift */,
 			);
-			path = Agent;
+			path = AutoVolume;
 			sourceTree = "<group>";
 		};
-		886F9D141E05F14700F8A083 /* AgentTests */ = {
+		886F9D141E05F14700F8A083 /* AutoVolumeTests */ = {
 			isa = PBXGroup;
 			children = (
 				886F9D151E05F14700F8A083 /* Tests.swift */,
 				886F9D171E05F14700F8A083 /* Info.plist */,
 			);
-			path = AgentTests;
+			path = AutoVolumeTests;
 			sourceTree = "<group>";
 		};
-		886F9D1F1E05F14700F8A083 /* AgentUITests */ = {
+		886F9D1F1E05F14700F8A083 /* AutoVolumeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				886F9D201E05F14700F8A083 /* UITests.swift */,
 				886F9D221E05F14700F8A083 /* Info.plist */,
 			);
-			path = AgentUITests;
+			path = AutoVolumeUITests;
+			sourceTree = "<group>";
+		};
+		889910B51E22FE3A00EFC0B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				889910B01E22FE2A00EFC0B4 /* AutoVolume.app */,
+				889910B11E22FE2A00EFC0B4 /* AutoVolumeTests.xctest */,
+				889910B21E22FE2A00EFC0B4 /* AutoVolumeUITests.xctest */,
+				889910B31E22FE2A00EFC0B4 /* AutoVolumeHelper.app */,
+				889910B41E22FE2A00EFC0B4 /* AutoVolumeHelperTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		884EBE841E14842C007DE6F4 /* AgentHelper */ = {
+		884EBE841E14842C007DE6F4 /* AutoVolumeHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 884EBEA21E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AgentHelper" */;
+			buildConfigurationList = 884EBEA21E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AutoVolumeHelper" */;
 			buildPhases = (
 				884EBE811E14842C007DE6F4 /* Sources */,
 				884EBE821E14842C007DE6F4 /* Frameworks */,
@@ -232,14 +230,14 @@
 			);
 			dependencies = (
 			);
-			name = AgentHelper;
-			productName = AgentHelper;
-			productReference = 884EBE851E14842C007DE6F4 /* AgentHelper.app */;
+			name = AutoVolumeHelper;
+			productName = AutoVolumeHelper;
+			productReference = 889910B31E22FE2A00EFC0B4 /* AutoVolumeHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		884EBE961E14842C007DE6F4 /* AgentHelperTests */ = {
+		884EBE961E14842C007DE6F4 /* AutoVolumeHelperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 884EBEA31E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AgentHelperTests" */;
+			buildConfigurationList = 884EBEA31E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AutoVolumeHelperTests" */;
 			buildPhases = (
 				884EBE931E14842C007DE6F4 /* Sources */,
 				884EBE941E14842C007DE6F4 /* Frameworks */,
@@ -250,14 +248,14 @@
 			dependencies = (
 				884EBE991E14842C007DE6F4 /* PBXTargetDependency */,
 			);
-			name = AgentHelperTests;
-			productName = AgentHelperTests;
-			productReference = 884EBE971E14842C007DE6F4 /* AgentHelperTests.xctest */;
+			name = AutoVolumeHelperTests;
+			productName = AutoVolumeHelperTests;
+			productReference = 889910B41E22FE2A00EFC0B4 /* AutoVolumeHelperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		886F9CFF1E05F14700F8A083 /* Agent */ = {
+		886F9CFF1E05F14700F8A083 /* AutoVolume */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "Agent" */;
+			buildConfigurationList = 886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AutoVolume" */;
 			buildPhases = (
 				886F9CFC1E05F14700F8A083 /* Sources */,
 				886F9CFD1E05F14700F8A083 /* Frameworks */,
@@ -268,14 +266,14 @@
 			);
 			dependencies = (
 			);
-			name = Agent;
-			productName = Agent;
-			productReference = 886F9D001E05F14700F8A083 /* Agent.app */;
+			name = AutoVolume;
+			productName = AutoVolume;
+			productReference = 889910B01E22FE2A00EFC0B4 /* AutoVolume.app */;
 			productType = "com.apple.product-type.application";
 		};
-		886F9D101E05F14700F8A083 /* AgentTests */ = {
+		886F9D101E05F14700F8A083 /* AutoVolumeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentTests" */;
+			buildConfigurationList = 886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AutoVolumeTests" */;
 			buildPhases = (
 				886F9D0D1E05F14700F8A083 /* Sources */,
 				886F9D0E1E05F14700F8A083 /* Frameworks */,
@@ -286,14 +284,14 @@
 			dependencies = (
 				886F9D131E05F14700F8A083 /* PBXTargetDependency */,
 			);
-			name = AgentTests;
-			productName = AgentTests;
-			productReference = 886F9D111E05F14700F8A083 /* AgentTests.xctest */;
+			name = AutoVolumeTests;
+			productName = AutoVolumeTests;
+			productReference = 889910B11E22FE2A00EFC0B4 /* AutoVolumeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		886F9D1B1E05F14700F8A083 /* AgentUITests */ = {
+		886F9D1B1E05F14700F8A083 /* AutoVolumeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentUITests" */;
+			buildConfigurationList = 886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AutoVolumeUITests" */;
 			buildPhases = (
 				886F9D181E05F14700F8A083 /* Sources */,
 				886F9D191E05F14700F8A083 /* Frameworks */,
@@ -304,9 +302,9 @@
 			dependencies = (
 				886F9D1E1E05F14700F8A083 /* PBXTargetDependency */,
 			);
-			name = AgentUITests;
-			productName = AgentUITests;
-			productReference = 886F9D1C1E05F14700F8A083 /* AgentUITests.xctest */;
+			name = AutoVolumeUITests;
+			productName = AutoVolumeUITests;
+			productReference = 889910B21E22FE2A00EFC0B4 /* AutoVolumeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -349,7 +347,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "Agent" */;
+			buildConfigurationList = 886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "AutoVolume" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -358,15 +356,15 @@
 				Base,
 			);
 			mainGroup = 886F9CF71E05F14700F8A083;
-			productRefGroup = 886F9D011E05F14700F8A083 /* Products */;
+			productRefGroup = 886F9CF71E05F14700F8A083;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				886F9CFF1E05F14700F8A083 /* Agent */,
-				886F9D101E05F14700F8A083 /* AgentTests */,
-				886F9D1B1E05F14700F8A083 /* AgentUITests */,
-				884EBE841E14842C007DE6F4 /* AgentHelper */,
-				884EBE961E14842C007DE6F4 /* AgentHelperTests */,
+				886F9CFF1E05F14700F8A083 /* AutoVolume */,
+				886F9D101E05F14700F8A083 /* AutoVolumeTests */,
+				886F9D1B1E05F14700F8A083 /* AutoVolumeUITests */,
+				884EBE841E14842C007DE6F4 /* AutoVolumeHelper */,
+				884EBE961E14842C007DE6F4 /* AutoVolumeHelperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -427,7 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				884EBE9C1E14842C007DE6F4 /* AgentHelperTests.m in Sources */,
+				884EBE9C1E14842C007DE6F4 /* AutoVolumeHelperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,17 +462,17 @@
 /* Begin PBXTargetDependency section */
 		884EBE991E14842C007DE6F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 884EBE841E14842C007DE6F4 /* AgentHelper */;
+			target = 884EBE841E14842C007DE6F4 /* AutoVolumeHelper */;
 			targetProxy = 884EBE981E14842C007DE6F4 /* PBXContainerItemProxy */;
 		};
 		886F9D131E05F14700F8A083 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 886F9CFF1E05F14700F8A083 /* Agent */;
+			target = 886F9CFF1E05F14700F8A083 /* AutoVolume */;
 			targetProxy = 886F9D121E05F14700F8A083 /* PBXContainerItemProxy */;
 		};
 		886F9D1E1E05F14700F8A083 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 886F9CFF1E05F14700F8A083 /* Agent */;
+			target = 886F9CFF1E05F14700F8A083 /* AutoVolume */;
 			targetProxy = 886F9D1D1E05F14700F8A083 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -505,9 +503,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentHelper/Info.plist;
+				INFOPLIST_FILE = AutoVolumeHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentHelper";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeHelper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -519,9 +517,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentHelper/Info.plist;
+				INFOPLIST_FILE = AutoVolumeHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentHelper";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeHelper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -533,11 +531,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentHelperTests/Info.plist;
+				INFOPLIST_FILE = AutoVolumeHelperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentHelperTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeHelperTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentHelper.app/Contents/MacOS/AgentHelper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoVolumeHelper.app/Contents/MacOS/AutoVolumeHelper";
 			};
 			name = Debug;
 		};
@@ -547,11 +545,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentHelperTests/Info.plist;
+				INFOPLIST_FILE = AutoVolumeHelperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentHelperTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeHelperTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentHelper.app/Contents/MacOS/AgentHelper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoVolumeHelper.app/Contents/MacOS/AutoVolumeHelper";
 			};
 			name = Release;
 		};
@@ -648,12 +646,11 @@
 		886F9D261E05F14700F8A083 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = Agent/Info.plist;
+				INFOPLIST_FILE = AutoVolume/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.Agent";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolume";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -662,12 +659,11 @@
 		886F9D271E05F14700F8A083 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = Agent/Info.plist;
+				INFOPLIST_FILE = AutoVolume/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.Agent";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolume";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -680,12 +676,12 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentTests/Info.plist;
+				INFOPLIST_FILE = AutoVolumeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agent.app/Contents/MacOS/Agent";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoVolume.app/Contents/MacOS/AutoVolume";
 			};
 			name = Debug;
 		};
@@ -696,12 +692,12 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentTests/Info.plist;
+				INFOPLIST_FILE = AutoVolumeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agent.app/Contents/MacOS/Agent";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoVolume.app/Contents/MacOS/AutoVolume";
 			};
 			name = Release;
 		};
@@ -711,12 +707,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentUITests/Info.plist;
+				INFOPLIST_FILE = AutoVolumeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Agent;
+				TEST_TARGET_NAME = AutoVolume;
 			};
 			name = Debug;
 		};
@@ -726,19 +722,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SCM43BAGSW;
-				INFOPLIST_FILE = AgentUITests/Info.plist;
+				INFOPLIST_FILE = AutoVolumeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AgentUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.AutoVolumeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Agent;
+				TEST_TARGET_NAME = AutoVolume;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		884EBEA21E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AgentHelper" */ = {
+		884EBEA21E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AutoVolumeHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				884EBE9E1E14842C007DE6F4 /* Debug */,
@@ -747,7 +743,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		884EBEA31E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AgentHelperTests" */ = {
+		884EBEA31E14842C007DE6F4 /* Build configuration list for PBXNativeTarget "AutoVolumeHelperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				884EBEA01E14842C007DE6F4 /* Debug */,
@@ -756,7 +752,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "Agent" */ = {
+		886F9CFB1E05F14700F8A083 /* Build configuration list for PBXProject "AutoVolume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D231E05F14700F8A083 /* Debug */,
@@ -765,7 +761,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "Agent" */ = {
+		886F9D251E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AutoVolume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D261E05F14700F8A083 /* Debug */,
@@ -774,7 +770,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentTests" */ = {
+		886F9D281E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AutoVolumeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D291E05F14700F8A083 /* Debug */,
@@ -783,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AgentUITests" */ = {
+		886F9D2B1E05F14700F8A083 /* Build configuration list for PBXNativeTarget "AutoVolumeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				886F9D2C1E05F14700F8A083 /* Debug */,

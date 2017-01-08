@@ -103,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
   
   func setLoginStartState(state: Bool) -> Bool {
-    let appBundleIdentifier = "jesse-c.AgentHelper"
+    let appBundleIdentifier = "jesse-c.AutoVolumeHelper"
     
     if SMLoginItemSetEnabled(appBundleIdentifier as CFString, state) {
       if state {

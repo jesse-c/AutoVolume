@@ -1,6 +1,6 @@
 //
-//  AgentHelperTests.m
-//  AgentHelperTests
+//  AutoVolumeHelperTests.m
+//  AutoVolumeHelperTests
 //
 //  Created by Jesse Claven on 29/12/16.
 //  Copyright © 2016 Jesse Claven. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface AgentHelperTests : XCTestCase
+@interface AutoVolumeHelperTests : XCTestCase
 
 @end
 
-@implementation AgentHelperTests
+@implementation AutoVolumeHelperTests
 
 - (void)setUp {
     [super setUp];

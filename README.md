@@ -1,4 +1,4 @@
-# AutoVolume (Mac)
+# AutoVolume (macOS)
 
 AutoVolume automatically sets the volume of macOS to a specified volume. At the moment it only fires on sleep. For example, the primary use case is to set the system volume to 0 when waking from sleep to save being surprised if you were listening to music quite loud before you closed it and fell asleep.
 
@@ -28,4 +28,3 @@ Contributions are welcome! Clone the repository and create a pull request.
 
 ## License
 
-__N.B.__ Why the 'Agent' references? It's part of another idea I'm working on with the idea being that auto volume is a an action.
