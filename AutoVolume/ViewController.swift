@@ -35,6 +35,8 @@ class ViewController: NSViewController {
       
       // Centre
       self.view.window?.center()
+      // Prevent resizing
+      _ = self.view.window?.styleMask.remove([.resizable])
         
       // Notifications
       appDelegate.nc.addObserver(self, selector: #selector(self.handleVolumeChanged), name: NSNotification.Name.OnVolumeChanged, object: nil)
