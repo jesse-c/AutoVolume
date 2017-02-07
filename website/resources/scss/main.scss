@@ -1,0 +1,326 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4em;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    Helvetica,
+    sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+h1 { font-size: 2rem }
+h2 { font-size: 1.5rem }
+h3 { font-size: 1.25rem }
+h4 { font-size: 1rem }
+h5 { font-size: .875rem }
+h6 { font-size: .75rem }
+
+p, ul, small {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: #0068F7;
+	outline-width: 0;
+	cursor: pointer;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+	width: 100%;
+}
+
+/* Hang (Credit: https://ianlunn.github.io/Hover/) */
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+%hvr-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+%hvr-hang:hover, %hvr-hang:focus, %hvr-hang:active {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+%container {
+  margin: 0 auto;
+  max-width: 70.0rem;
+  padding: 0 2.0rem;
+  position: relative;
+  width: 100%;
+}
+
+%row {
+	padding: 0;
+  width: 100%;
+}
+
+%mx-w-medium {
+	max-width: 35.0rem;
+}
+
+%cf:after {
+  clear: both;
+  content: ' ';
+  display: table;
+}
+
+%fl {
+  float: left;
+}
+
+%fr {
+  float: right;
+}
+
+%w50 {
+	width: 50%;
+}
+
+%w100 {
+	width: 100%;
+}
+
+%centre {
+  margin: 0 auto;
+}
+
+%action a {
+	@extend %hvr-hang;
+
+  border: 1px solid #0068F7;
+  border-radius: 2px;
+	padding: 8px 15px;
+	text-decoration: none;
+	box-shadow: 3px 3px 0px 0px #0068F7;
+	color: #0068F7;
+
+
+	&:hover {
+	}
+
+	&:active {
+		background-color: #0068F7;
+	}
+}
+
+// --- 
+// TODO Move comments to the beginning!
+
+
+
+body {
+  > div:nth-of-type(1) { // <container
+    @extend %container;
+
+    > div:nth-of-type(1) { // <header
+      @extend %row;
+      @extend %cf;
+
+			background-color: #000000;
+			color: #FFFFFF;
+			padding: 10px 15px;
+			font-size: 0.8em;
+
+			a {
+				color: #FFFFFF;
+
+				&:hover {
+					color: #F8D353;
+				}
+			}
+
+      > div:nth-of-type(1) { // <nav
+        @extend %fl;
+      } // nav>
+
+      > div:nth-of-type(2) { // <social
+        @extend %fr;
+      } // social>
+    } // header>
+
+    > div:nth-of-type(2) { // <introduction
+      @extend %row;
+      @extend %mx-w-medium;
+      @extend %centre;
+      @extend %action;
+
+      text-align: center;
+
+			> h1 { 
+				font-size: 2.5rem;
+				margin-bottom: 1em;
+			}
+
+      > div:nth-of-type(1) { // <actions
+        @extend %row;
+
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+
+        > div:nth-of-type(1) { // <download
+					display: inline-block;
+					margin-right: 10px;
+        } // download>
+
+        > div:nth-of-type(2) { // <source code
+					display: inline-block;
+        } // source code>
+      } // actions>
+
+			> small {
+				display: block;
+			}
+    } // introduction>
+
+    > div:nth-of-type(3) { // <ad
+      @extend %row;
+
+      text-align: center;
+    } // ad>
+
+    > div:nth-of-type(4) { // <instructions
+      @extend %row;
+      @extend %cf;
+      
+      > div:nth-of-type(1) { // <screenshot
+				@extend %fr;
+				@extend %w50;
+      } // screenshot>
+
+			> div:nth-of-type(2) { // <steps
+        @extend %fl;
+				@extend %w50;
+
+				> ol {
+					padding-left: 1.75rem;
+				}
+			} // steps>
+    } // instructions>
+
+    > div:nth-of-type(5) { // <footer
+      @extend %row;
+
+			font-size: 0.8em;
+			padding: 10px 0 10px 0;
+			border-top: 1px solid #000000;
+    } // footer>
+  } // container>
+}
+
+@media only screen and (max-device-width: 414px)  {
+	body {
+		> div:nth-of-type(1) { // <container
+			> div:nth-of-type(4) { // <instructions
+				> h2 {
+					text-align: center;
+				}
+
+				> div:nth-of-type(1) { // <screenshot
+					width: 100%;
+				} // screenshot>
+
+				> div:nth-of-type(2) { // <steps
+					width: 100%;
+				} // steps>
+			} // instructions>
+		} // container>
+	}
+}

@@ -1,0 +1,6 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Jesse Claven -- Software engineer & designer -- @jqiye

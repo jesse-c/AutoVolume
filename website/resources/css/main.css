@@ -1,0 +1,206 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  font-size: 1.4em;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #111;
+  background-color: #fff; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+svg {
+  max-height: 100%; }
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: .5em; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.25rem; }
+
+h4 {
+  font-size: 1rem; }
+
+h5 {
+  font-size: 0.875rem; }
+
+h6 {
+  font-size: 0.75rem; }
+
+p, ul, small {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+a {
+  color: #0068F7;
+  outline-width: 0;
+  cursor: pointer; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+  width: 100%; }
+
+/* Hang (Credit: https://ianlunn.github.io/Hover/) */
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px); }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px); }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px); } }
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px); }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px); }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px); } }
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px); } }
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px); } }
+body > div:nth-of-type(1) > div:nth-of-type(2) a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent; }
+
+body > div:nth-of-type(1) > div:nth-of-type(2) a:hover, body > div:nth-of-type(1) > div:nth-of-type(2) a:focus, body > div:nth-of-type(1) > div:nth-of-type(2) a:active {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate; }
+
+body > div:nth-of-type(1) {
+  margin: 0 auto;
+  max-width: 70.0rem;
+  padding: 0 2.0rem;
+  position: relative;
+  width: 100%; }
+
+body > div:nth-of-type(1) > div:nth-of-type(1), body > div:nth-of-type(1) > div:nth-of-type(2), body > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1), body > div:nth-of-type(1) > div:nth-of-type(3), body > div:nth-of-type(1) > div:nth-of-type(4), body > div:nth-of-type(1) > div:nth-of-type(5) {
+  padding: 0;
+  width: 100%; }
+
+body > div:nth-of-type(1) > div:nth-of-type(2) {
+  max-width: 35.0rem; }
+
+body > div:nth-of-type(1) > div:nth-of-type(1):after, body > div:nth-of-type(1) > div:nth-of-type(4):after {
+  clear: both;
+  content: ' ';
+  display: table; }
+
+body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1), body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) {
+  float: left; }
+
+body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2), body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) {
+  float: right; }
+
+body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1), body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) {
+  width: 50%; }
+
+body > div:nth-of-type(1) > div:nth-of-type(2) {
+  margin: 0 auto; }
+
+body > div:nth-of-type(1) > div:nth-of-type(2) a {
+  border: 1px solid #0068F7;
+  border-radius: 2px;
+  padding: 8px 15px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0px 0px #0068F7;
+  color: #0068F7; }
+  body > div:nth-of-type(1) > div:nth-of-type(2) a:active {
+    background-color: #0068F7; }
+
+body > div:nth-of-type(1) > div:nth-of-type(1) {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  font-size: 0.8em; }
+  body > div:nth-of-type(1) > div:nth-of-type(1) a {
+    color: #FFFFFF; }
+    body > div:nth-of-type(1) > div:nth-of-type(1) a:hover {
+      color: #F8D353; }
+body > div:nth-of-type(1) > div:nth-of-type(2) {
+  text-align: center; }
+  body > div:nth-of-type(1) > div:nth-of-type(2) > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1em; }
+  body > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
+    body > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+      display: inline-block;
+      margin-right: 10px; }
+    body > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) {
+      display: inline-block; }
+  body > div:nth-of-type(1) > div:nth-of-type(2) > small {
+    display: block; }
+body > div:nth-of-type(1) > div:nth-of-type(3) {
+  text-align: center; }
+body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) > ol {
+  padding-left: 1.75rem; }
+body > div:nth-of-type(1) > div:nth-of-type(5) {
+  font-size: 0.8em;
+  padding: 10px 0 10px 0;
+  border-top: 1px solid #000000; }
+
+@media only screen and (max-device-width: 414px) {
+  body > div:nth-of-type(1) > div:nth-of-type(4) > h2 {
+    text-align: center; }
+  body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) {
+    width: 100%; }
+  body > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) {
+    width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */
