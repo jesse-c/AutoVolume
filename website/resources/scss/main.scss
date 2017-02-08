@@ -207,12 +207,12 @@ hr {
 
 
 body {
-  > div:nth-of-type(1) { // <container
+	> div:nth-of-type(1) { // <header
     @extend %container;
 
-    > div:nth-of-type(1) { // <header
-      @extend %row;
-      @extend %cf;
+		> div:nth-of-type(1) { // <items
+			@extend %row;
+			@extend %cf;
 
 			background-color: #000000;
 			color: #FFFFFF;
@@ -227,22 +227,27 @@ body {
 				}
 			}
 
-      > div:nth-of-type(1) { // <nav
-        @extend %fl;
-      } // nav>
+			> div:nth-of-type(1) { // <nav
+				@extend %fl;
+			} // nav>
 
-      > div:nth-of-type(2) { // <social
-        @extend %fr;
-      } // social>
-    } // header>
+			> div:nth-of-type(2) { // <social
+				@extend %fr;
+			} // social>
+		} // items>
+	} // header>
 
-    > div:nth-of-type(2) { // <introduction
+  > div:nth-of-type(2) { // <container
+    @extend %container;
+
+    > div:nth-of-type(1) { // <introduction
       @extend %row;
       @extend %mx-w-medium;
       @extend %centre;
       @extend %action;
 
       text-align: center;
+			margin-bottom: 30px;
 
 			> h1 { 
 				font-size: 2.5rem;
@@ -270,13 +275,13 @@ body {
 			}
     } // introduction>
 
-    > div:nth-of-type(3) { // <ad
+    > div:nth-of-type(2) { // <ad
       @extend %row;
 
       text-align: center;
     } // ad>
 
-    > div:nth-of-type(4) { // <instructions
+    > div:nth-of-type(3) { // <instructions
       @extend %row;
       @extend %cf;
       
@@ -294,21 +299,40 @@ body {
 				}
 			} // steps>
     } // instructions>
-
-    > div:nth-of-type(5) { // <footer
-      @extend %row;
-
-			font-size: 0.8em;
-			padding: 10px 0 10px 0;
-			border-top: 1px solid #000000;
-    } // footer>
   } // container>
+
+	> div:nth-of-type(3) { // <footer
+		@extend %container;
+
+		position: absolute;
+    right: 0;
+		bottom: 0;
+		left: 0;
+
+		> div:nth-of-type(1) { // <wrapper
+			@extend %row;
+			padding: 10px 0px;
+			border-top: 1px solid #000000;
+
+			> span {
+				font-size: 0.8em;
+				margin: 0;
+				padding: 0;
+			}
+		} // wrapper>
+	} // footer>
 }
 
 @media only screen and (max-device-width: 414px)  {
 	body {
-		> div:nth-of-type(1) { // <container
-			> div:nth-of-type(4) { // <instructions
+		> div:nth-of-type(1) { // <header
+			width: 100vw;
+			max-width: 100vw;
+			padding: 0;
+		}
+
+		> div:nth-of-type(2) { // <container
+			> div:nth-of-type(3) { // <instructions
 				> h2 {
 					text-align: center;
 				}
@@ -322,5 +346,16 @@ body {
 				} // steps>
 			} // instructions>
 		} // container>
+		
+		> div:nth-of-type(3) { // <footer
+			width: 100vw;
+			max-width: 100vw;
+			padding: 0;
+			position: relative;
+
+			> div:nth-of-type(1) { // <wrapper
+				padding-left: 15px;
+			} // wrapper>
+		} // footer>
 	}
 }
