@@ -24,7 +24,8 @@ Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs
 
 ## Contributing
 
-Contributions are welcome! Clone the repository and create a pull request.
+Contributions are welcome! See [contributing](CONTRIBUTING.md).
 
 ## License
 
+See [license](LICENSE).
