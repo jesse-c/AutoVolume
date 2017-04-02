@@ -323,6 +323,14 @@ body {
 	} // footer>
 }
 
+@media only screen and (max-device-width: 768px)  {
+	body {
+		> div:nth-of-type(3) { // <footer
+			position: relative;
+		} // footer>
+	}
+}
+
 @media only screen and (max-device-width: 414px)  {
 	body {
 		> div:nth-of-type(1) { // <header
