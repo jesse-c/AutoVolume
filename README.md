@@ -12,7 +12,6 @@ Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs
 
 ## TODO
 
-- Fix start at login
 - Add user notifications
 - Remove NSLog or hide behind debug flag
 
