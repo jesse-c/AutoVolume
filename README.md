@@ -12,8 +12,8 @@ Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs
 
 ## TODO
 
-- Add user notifications
-- Remove NSLog or hide behind debug flag
+- [ ] Add user notifications
+- [ ] Remove NSLog or hide behind debug flag
 
 ## Wishlist
 
@@ -22,6 +22,7 @@ Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs
 - Only change volume if a specified amount of time has elapsed
 - Add option to display the current volume in a notable way on event
 - Act only if volume is above a specified threshold
+- Set time when to set volume ([suggested by Simone M](https://www.designernews.co/comments/254374))
 
 ## Contributing
 
