@@ -23,6 +23,8 @@ Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs
 - Add option to display the current volume in a notable way on event
 - Act only if volume is above a specified threshold
 - Set time when to set volume ([suggested by Simone M](https://www.designernews.co/comments/254374))
+- [Optional] menu bar icon
+- Set volume on system login
 
 ## Contributing
 
