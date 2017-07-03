@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     do {
       try defaultOutputDeviceID = getDefaultOutputDevice()
-      NSLog("Default output device ID: \(defaultOutputDeviceID)")
+      NSLog("Default output device ID: \(String(describing: defaultOutputDeviceID))")
     } catch VolumeError.noDefaultOutputDevice {
       NSLog("No default output device found, qutting")
       showAlert(style: NSAlertStyle.critical, message: "Failed to find system audio device.", info: "Application will now quit.")
@@ -107,9 +107,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     if SMLoginItemSetEnabled(appBundleIdentifier as CFString, state) {
       if state {
-        NSLog("Successfully add login item.")
+        NSLog("Successfully added login item.")
       } else {
-        NSLog("Successfully remove login item.")
+        NSLog("Successfully removed login item.")
       }
       
       return true
