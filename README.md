@@ -8,7 +8,18 @@ Why? To learn about macOS development, begin the 'Agent' idea, and practice desi
 
 Alternative:
 
-Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs.caffeinate.watcher.html#systemDidWake) and [mute default audio device](https://github.com/STRML/init/blob/master/hammerspoon/init.lua#L218).
+Use HammerSpoon and hook into [systemDidWake](http://www.hammerspoon.org/docs/hs.caffeinate.watcher.html#systemDidWake) and [mute default audio device](https://github.com/STRML/init/blob/master/hammerspoon/init.lua#L218). For example:
+
+```lua
+function sleepWatch(eventType)
+  if (eventType == hs.caffeinate.watcher.systemWillSleep or eventType == hs.caffeinate.watcher.systemDidWake) then
+    hs.audiodevice.defaultOutputDevice():setVolume(0)
+  end
+end
+
+sleepWatcher = hs.caffeinate.watcher.new(sleepWatch)
+sleepWatcher:start()
+```
 
 ## TODO
 
